@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 4,
+  "prettier.disableLanguages": ["html"],
+  "prettier.tabWidth": 4,
+  "prettier.printWidth": 80,
+  "prettier.bracketSpacing": true,
+  "prettier.singleQuote": true
+}

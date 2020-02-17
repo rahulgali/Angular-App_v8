@@ -30,6 +30,12 @@
       ],
       "my-angular-lib/*": [
         "dist/my-angular-lib/*"
+      ],
+      "my-angular-element": [
+        "dist/my-angular-element"
+      ],
+      "my-angular-element/*": [
+        "dist/my-angular-element/*"
       ]
     }
   },

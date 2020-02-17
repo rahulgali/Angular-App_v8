@@ -30,7 +30,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              {
+                "input": "node_modules/document-register-element/build/document-register-element.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -159,6 +163,42 @@
           }
         }
       }
-    }},
+    },
+    "my-angular-element": {
+      "projectType": "library",
+      "root": "projects/my-angular-element",
+      "sourceRoot": "projects/my-angular-element/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/my-angular-element/tsconfig.lib.json",
+            "project": "projects/my-angular-element/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/my-angular-element/src/test.ts",
+            "tsConfig": "projects/my-angular-element/tsconfig.spec.json",
+            "karmaConfig": "projects/my-angular-element/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/my-angular-element/tsconfig.lib.json",
+              "projects/my-angular-element/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
   "defaultProject": "my-angular-app"
 }

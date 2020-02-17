@@ -8,9 +8,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-library": "npm run lint && ng build my-angular-lib",
-    "test-library": "ng test my-angular-lib --code-coverage",
-    "start-lib-watch-mode": "npm run lint && ng build my-angular-lib --watch"
+    "build-my-angular-library": "npm run lint && ng build my-angular-lib",
+    "test-my-angular-library": "ng test my-angular-lib --code-coverage",
+    "start-my-angular-library-watch-mode": "npm run lint && ng build my-angular-lib --watch",
+    "test-my-angular-element": "ng test my-angular-lib --code-coverage",
+    "build-my-angular-element-as-web-comp": "ng build --prod --tsConfig=tsconfig-es5.app.json --main=src/main.element.ts --polyfills=src/polyfills.element.ts --output-hashing none && node custom-angular-element.js"
   },
   "private": true,
   "dependencies": {
@@ -18,10 +20,15 @@
     "@angular/common": "~8.2.11",
     "@angular/compiler": "~8.2.11",
     "@angular/core": "~8.2.11",
+    "@angular/elements": "^8.2.12",
     "@angular/forms": "~8.2.11",
     "@angular/platform-browser": "~8.2.11",
     "@angular/platform-browser-dynamic": "~8.2.11",
     "@angular/router": "~8.2.11",
+    "@webcomponents/custom-elements": "^1.3.2",
+    "@webcomponents/webcomponentsjs": "^2.4.1",
+    "concat": "^1.0.3",
+    "document-register-element": "^1.7.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"

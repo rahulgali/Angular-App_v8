@@ -11,7 +11,7 @@ export class ElementComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    require('dist/angular-element/element.js');
+    // require('dist/angular-element/element.js');
   }
 
 }

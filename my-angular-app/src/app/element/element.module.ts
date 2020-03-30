@@ -13,4 +13,8 @@ import { ElementComponent } from './components/element.component';
         ElementComponent
     ]
 })
-export class ElementModule { }
+export class ElementModule {
+    constructor() {
+        console.log('Element module loaded.!!');
+    }
+}

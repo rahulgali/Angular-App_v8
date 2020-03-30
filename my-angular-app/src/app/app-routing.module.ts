@@ -18,6 +18,12 @@ const routes: Routes = [
     {
         path: 'element',
         component: ElementComponent
+    },
+    {
+        // ng generate module LazyLoading --route lazy --module app.module
+        // Declaration not needed in app module
+        path: 'lazy',
+        loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) 
     }
 ];
 

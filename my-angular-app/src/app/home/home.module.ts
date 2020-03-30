@@ -13,4 +13,8 @@ import { HomeComponent } from './components//home.component';
         HomeComponent
     ]
 })
-export class HomeModule { }
+export class HomeModule {
+    constructor() {
+        console.log('Home module loaded.!!');
+    }
+}

@@ -13,4 +13,8 @@ import { LibraryComponent } from './components/library.component';
         LibraryComponent
     ]
 })
-export class LibraryModule { }
+export class LibraryModule {
+    constructor() {
+        console.log('Library module loaded.!!');
+    }
+}

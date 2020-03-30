@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, throwError, of } from 'rxjs';
 import { Environment } from 'src/environments/environment';
 import { map, catchError } from 'rxjs/operators';
-import { User } from 'src/app/model/user.model';
+import { User } from 'src/app/models/user.model';
 import { Resolve } from '@angular/router';
 import { delay } from 'rxjs/internal/operators';
 

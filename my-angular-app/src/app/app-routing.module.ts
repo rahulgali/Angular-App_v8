@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LibraryComponent } from './library/library.component';
-import { ElementComponent } from './element/element.component';
-import { WelcomeComponent } from './welcome/welcome.component';
-import { UserService } from './service/user/user-service.service';
+import { LibraryComponent } from './library/components/library.component';
+import { ElementComponent } from './element/components/element.component';
+import { WelcomeComponent } from './welcome/components/welcome.component';
+import { UserService } from './welcome/services/user/user-service.service';
 
 const routes: Routes = [
     {

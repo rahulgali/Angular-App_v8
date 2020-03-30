@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../models/user.model';
-import { UserService } from '../services/user/user-service.service';
+import { UserService } from 'src/app/home/services/user/user-service.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'app-welcome',
-    templateUrl: './welcome.component.html',
-    styleUrls: ['./welcome.component.scss']
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss']
 })
-export class WelcomeComponent implements OnInit {
+export class HomeComponent implements OnInit {
     public hasPageError: boolean = false;
     public data: any;
 
@@ -17,9 +16,9 @@ export class WelcomeComponent implements OnInit {
 
     ngOnInit() {
         this.userService.getUserData().subscribe(
-            (response) => { 
+            (response) => {
                 this.data = response;
-                console.log('Response in component-->', response);
+                // console.log('Response in component-->', response);
             },
             (error) => {
                 this.hasPageError = true;
@@ -29,5 +28,4 @@ export class WelcomeComponent implements OnInit {
         // Used with Resolver approach.
         // this.data = this.route.snapshot.data.userService;
     }
-
 }

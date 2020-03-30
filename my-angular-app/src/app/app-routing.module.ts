@@ -1,18 +1,24 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { LibraryComponent } from './library/components/library.component';
+import { RouterModule, Routes } from '@angular/router';
 import { ElementComponent } from './element/components/element.component';
-import { WelcomeComponent } from './welcome/components/welcome.component';
-import { UserService } from './welcome/services/user/user-service.service';
+import { HomeComponent } from './home/components/home.component';
+import { LibraryComponent } from './library/components/library.component';
+import { UserService } from './home/services/user/user-service.service';
 
 const routes: Routes = [
     {
         path: '',
-        component: WelcomeComponent,
+        component: HomeComponent,
         resolve: { userService: UserService }
     },
-    { path: 'library', component: LibraryComponent },
-    { path: 'element', component: ElementComponent }
+    {
+        path: 'library',
+        component: LibraryComponent
+    },
+    {
+        path: 'element',
+        component: ElementComponent
+    }
 ];
 
 @NgModule({

@@ -18,10 +18,9 @@ import { Injectable } from '@angular/core';
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.
 @Injectable()
 export class Environment {
-
     public static production = false;
-
-    public getApiUrl() {
-        return 'https://localhost:4200';
-    }
+    
+    // public getApiUrl() {
+    //     return 'https://localhost:4200';
+    // }
 }

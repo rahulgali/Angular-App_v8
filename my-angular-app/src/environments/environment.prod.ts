@@ -1,4 +1,6 @@
-export const environment = {
-  production: true,
-  apiUrl: 'https://localhost:4200/'
-};
+import { Injectable } from '@angular/core';
+
+@Injectable()
+export class Environment {
+    public static production = true;
+}

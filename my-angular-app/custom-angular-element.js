@@ -15,4 +15,7 @@ const concat = require('concat');
     await fs.ensureDir('dist')
     await fs.ensureDir('dist/angular-element')
     await concat(files_es5, 'dist/angular-element/element.js')
+    // Just needed for local development to include in angular.json scripts
+    await fs.mkdir('element')
+    await concat(files_es5, 'element/element.js')
 })()

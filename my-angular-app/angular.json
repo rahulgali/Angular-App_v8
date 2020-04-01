@@ -33,7 +33,8 @@
             "scripts": [
               {
                 "input": "node_modules/document-register-element/build/document-register-element.js"
-              }
+              },
+              "element/element.js"
             ]
           },
           "configurations": {

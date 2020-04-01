@@ -9,9 +9,15 @@ import { delay } from 'rxjs/internal/operators';
 
 @Injectable()
 export class UserService implements Resolve<User> {
-    public userDetailsCache: Observable<User>;
 
     constructor(private httpClient: HttpClient, private environment: Environment) { }
+    public userDetailsCache: Observable<User>;
+
+    private mockData: User = {
+        name: 'Rahul',
+        city: 'Hyderabad',
+        country: 'India'
+    };
 
     public resolve() {
         /**
@@ -42,7 +48,7 @@ export class UserService implements Resolve<User> {
                 setTimeout(() => {
                     return response as User;
                 }, 5000);
-                
+
             }),
             catchError(this.handleError)
         );
@@ -53,7 +59,7 @@ export class UserService implements Resolve<User> {
                     // console.log('Response is-->', response);
                     return response as User;
                 }, 5000);
-                
+
             }),
             catchError(this.handleError)
         );
@@ -61,11 +67,5 @@ export class UserService implements Resolve<User> {
 
     public handleError(error: any): Observable<any> {
         return throwError(error.message || error);
-    }
-
-    private mockData: User = {
-        name: "Rahul",
-        city: "Hyderabad",
-        country: "India"
     }
 }

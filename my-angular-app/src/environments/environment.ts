@@ -19,7 +19,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class Environment {
     public static production = false;
-    
+
     // public getApiUrl() {
     //     return 'https://localhost:4200';
     // }

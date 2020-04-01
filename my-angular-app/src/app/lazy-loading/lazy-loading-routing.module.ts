@@ -6,7 +6,7 @@ import { LazyLoadingComponent } from './lazy-loading.component';
 const routes: Routes = [
     {
         path: '',
-        component: LazyLoadingComponent 
+        component: LazyLoadingComponent
     }
 ];
 

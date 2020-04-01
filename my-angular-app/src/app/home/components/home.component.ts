@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
     styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    public hasPageError: boolean = false;
+    public hasPageError = false;
     public data: any;
 
     constructor(private userService: UserService, private route: ActivatedRoute) {
